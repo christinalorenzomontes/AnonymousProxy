@@ -1,0 +1,112 @@
+.page__footer {
+  background-color: $footer-color;
+  color: $light-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 465px;
+  min-width: 320px;
+  position: relative;
+  margin: auto;
+  .footer-wrapper {
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .list {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    line-height: 1.875rem;
+    :hover {
+      color: $primary-color;
+    }
+  }
+  .ico-arrow {
+    display: none;
+    background-color: $button-color;
+    border-radius: 22.5px;
+    width: 45px;
+    height: 45px;
+
+    box-shadow: 0 2px 4px 0 $dark-grey;
+    transform: translate(184px, -65px);
+    background-color: $light-color;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+  }
+  .copy {
+    text-transform: lowercase;
+  }
+  .heart {
+    color: $primary-color;
+  }
+}
+
+@media all and (min-width: $tablet) {
+  .page__footer {
+    min-height: 240px;
+    padding: 45px 39px;
+
+    .footer-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      text-align: left;
+    }
+
+    .ico-arrow {
+      transform: translate(325px, -65px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-list1 {
+      width: 210px;
+      order: 2;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    .menu-list2 {
+      width: 210px;
+      order: 3;
+      margin-left: 15px;
+    }
+
+    .copy {
+      order: 1;
+      margin-right: 15px;
+      width: 210px;
+    }
+  }
+}
+
+@media all and (min-width: $minidesktop) {
+  .page__footer {
+    .ico-arrow {
+      transform: translate(450px, -65px);
+    }
+  }
+}
+
+@media all and (min-width: $desktop) {
+  .page__footer {
+    .ico-arrow {
+      transform: translate(550px, -65px);
+    }
+    .footer-menu {
+      justify-content: center;
+    }
+    .menu-list1 {
+      width: 161px;
+    }
+    .menu-list2 {
+      width: 159px;
+    }
+    .copy {
+      width: 159px;
+    }
+  }
+}
